@@ -1,0 +1,130 @@
+/* General styling */
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f8ff;
+}
+
+.game-container {
+    background-color: #ffebcd;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 26px;
+    color: #ff6347;
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-size: 16px;
+    color: #ff8c00;
+}
+
+.score {
+    font-size: 18px;
+    color: #ff4500;
+    margin-bottom: 10px;
+}
+
+.question {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.option {
+    font-size: 18px;
+    width: 60px;
+    height: 60px;
+    background-color: #ff7f50;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.option:hover {
+    background-color: #ff6347;
+    transform: scale(1.1);
+}
+
+.option.correct {
+    background-color: #32cd32 !important;
+    animation: correctAnimation 0.5s;
+}
+
+.option.wrong {
+    background-color: #ff4500 !important;
+    animation: wrongAnimation 0.5s;
+}
+
+@keyframes correctAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes wrongAnimation {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+.result {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+}
+
+#next-btn {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#next-btn:hover {
+    background-color: #ff4500;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    padding: 10px;
+    background-color: #f0f8ff;
+    border-top: 1px solid #ddd;
+}
+
+footer p {
+    margin: 0;
+    color: #4CAF50;
+}
